@@ -20,18 +20,18 @@ public class PuzzleManager : MonoBehaviour
                 return;
         }
 
-        // Puzzle complete
+        // Puzzle complete!
         successText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
-        winSound?.Play();
+        if (winSound != null)
+            winSound.Play();
     }
 
     public void RestartPuzzle()
     {
         foreach (ColorSphere s in spheres)
         {
-            s.GetComponent<Rigidbody>().isKinematic = false;
-            s.GetComponent<XRGrabInteractable>().enabled = true;
+            s.Unlock();
             s.ResetPosition();
         }
 

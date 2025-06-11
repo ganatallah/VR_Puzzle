@@ -156,7 +156,8 @@ Transform:
   m_LocalPosition: {x: 3.0422726, y: -0.43939394, z: 0.027555466}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 558644266}
   m_Father: {fileID: 146892867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &28841400
@@ -174,6 +175,7 @@ MonoBehaviour:
   requiredColor: Green
   buzzSound: {fileID: 28841404}
   puzzleManager: {fileID: 1701541296}
+  snapPoint: {fileID: 558644266}
 --- !u!65 &28841401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -256,7 +258,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9199a2dc743278b4096778dd654a7373, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -923,6 +925,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &338849062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338849063}
+  m_Layer: 0
+  m_Name: SnapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338849063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338849062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2136721931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphereColor: Red
   originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &464976221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,6 +1666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphereColor: Blue
   originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &485409414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1700,37 @@ Transform:
   - {fileID: 1207538904}
   - {fileID: 883230472}
   m_Father: {fileID: 1440568597}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &558644265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 558644266}
+  m_Layer: 0
+  m_Name: SnapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &558644266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558644265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 28841399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &619952711
 PrefabInstance:
@@ -2046,6 +2112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphereColor: Green
   originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &755124161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,14 +3283,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440568594}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.6, y: 1.5, z: -18.12}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -37.6, y: 1.12, z: -18.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 485409415}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1440568598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3403,13 +3470,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
+  m_Height: 0.8
   m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!65 &1440568604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3429,8 +3496,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9715309, y: 1.2338264, z: 1}
-  m_Center: {x: 0.014234543, y: -0.11691345, z: 0}
+  m_Size: {x: 0.9715309, y: 0.51181275, z: 1}
+  m_Center: {x: 0.014234543, y: 0.24409345, z: 0}
 --- !u!54 &1440568605
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3599,7 +3666,8 @@ Transform:
   m_LocalPosition: {x: 3.0422726, y: -0.43939394, z: -1.5624447}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1849182173}
   m_Father: {fileID: 146892867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1673434844
@@ -3617,6 +3685,7 @@ MonoBehaviour:
   requiredColor: Blue
   buzzSound: {fileID: 1673434848}
   puzzleManager: {fileID: 1701541296}
+  snapPoint: {fileID: 1849182173}
 --- !u!65 &1673434845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3699,7 +3768,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9199a2dc743278b4096778dd654a7373, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3829,7 +3898,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa7136664cc8ca43934408360fcb7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spheres: []
+  spheres:
+  - {fileID: 425296184}
+  - {fileID: 464976228}
+  - {fileID: 693074136}
   successText: {fileID: 1349143672}
   restartButton: {fileID: 755124163}
   winSound: {fileID: 1701541297}
@@ -3929,6 +4001,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1849182172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1849182173}
+  m_Layer: 0
+  m_Name: SnapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1849182173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849182172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1673434843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1859988440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5609321221556402741, guid: 543c0317d41fa784fb4ea0cbd4d5f2ad,
@@ -4259,7 +4362,8 @@ Transform:
   m_LocalPosition: {x: 3.0422726, y: -0.43939394, z: 1.5575562}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 338849063}
   m_Father: {fileID: 146892867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2136721932
@@ -4277,6 +4381,7 @@ MonoBehaviour:
   requiredColor: Red
   buzzSound: {fileID: 2136721936}
   puzzleManager: {fileID: 1701541296}
+  snapPoint: {fileID: 338849063}
 --- !u!65 &2136721933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4359,7 +4464,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9199a2dc743278b4096778dd654a7373, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
